@@ -29,7 +29,7 @@ class Game
     end
 
   def current_player
-    @board.turn_count % 2 == 0) ? player_1 : player_2
+    @board.turn_count % 2 == 0 ? player_1 : player_2
       # if turn_count has a remainder of 0 (player1): if turn_counthas a remainder (player2)
   end
 
@@ -82,9 +82,9 @@ class Game
         turn
       end
       if won?
-        puts "Congratulations #{winner}!"
-      elsif draw? == true
-        puts "Cat's Game!"
+      puts "Congratulations #{winner}!"
+    elsif draw? == true
+    puts "Cat's Game!"
       end
     end
 
@@ -94,7 +94,9 @@ class Game
         players_count = gets.strip
         puts "Who should go first?"
         first_player = gets.strip
+
         board.display
+
 
       if players_count == "0" && first_player == "1" || first_player == "2"
           @player_1 = Players::Computer.new("X")
@@ -129,7 +131,7 @@ class Game
           start
           end
         end
-      end
+        end
 
 
 
